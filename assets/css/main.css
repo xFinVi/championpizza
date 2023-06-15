@@ -836,6 +836,30 @@ span {
   color: #fff;
   font-size: 1.1rem;
 }
+
+.menu-price,
+.pizza-sizes {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin-left: auto;
+}
+
+.pizza-sizes select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  appearance: none;
+  border: none;
+}
+.pizza-sizes select:focus {
+  outline: none;
+  border: 2px solid #e12d09;
+}
+.pizza-details {
+  padding: 1rem;
+}
+
 /* ========================================CHAMPION MENU ITEMs ===========================*/
 
 .food-items,
@@ -849,7 +873,7 @@ span {
   color: #fff;
 }
 .food-items h4 {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .pizza-card,
@@ -862,7 +886,7 @@ span {
   text-align: center;
   padding: 1rem;
   margin: 3rem 0;
-  border-radius: 15px;
+  outline: none;
 }
 
 .drinks-card,
