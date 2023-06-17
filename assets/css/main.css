@@ -921,9 +921,12 @@ span {
 }
 
 .extra-items {
+  width: 50%;
   color: #fff;
-  border: 1px solid #d4d4e0;
+  border-left: 1px solid #d4d4e0;
+  border-right: 1px solid #d4d4e0;
   padding: 1rem;
+  margin: 0 auto;
 }
 .drink-items {
   width: 85%;
