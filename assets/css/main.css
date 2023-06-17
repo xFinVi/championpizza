@@ -828,7 +828,7 @@ span {
 }
 
 .card-menu h1 {
-  color: #c6dae5;
+  color: #ecd540;
   width: 100%;
   font-size: 3.5rem;
   font-family: cursive;
@@ -922,7 +922,7 @@ span {
 
 .extra-items {
   width: 50%;
-  color: #fff;
+  color: #ccc282;
   border-left: 1px solid #d4d4e0;
   border-right: 1px solid #d4d4e0;
   padding: 1rem;
