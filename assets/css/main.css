@@ -693,10 +693,14 @@ span {
   object-fit: cover;
   -webkit-mask-image: linear-gradient(
     rgb(0 0 0 / 1),
-    rgb(0 0 0 / 0.8) 80%,
+    rgb(0 0 0 / 0.8) 70%,
     rgb(0 0 0 / 0)
   );
-  mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.8) 30%);
+  mask-image: linear-gradient(
+    rgb(0 0 0 / 1),
+    rgb(0 0 0 / 0.7) 70%,
+    rgb(0 0 0 / 0)
+  );
 }
 
 .about-content {
