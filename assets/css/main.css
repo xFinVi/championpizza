@@ -657,66 +657,70 @@ span {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .about-img {
-  background-position: center;
-  background-size: cover;
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 75vh;
+  margin: 8rem auto 0 auto;
+  position: relative;
+  background-color: #ffffff;
 }
 
-.about h3 {
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 30px;
-  font-family: var(--font-secondary);
-}
-
-.about .call-us {
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
-  background-color: #fff;
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+.hero-title {
+  color: hsl(177, 46%, 65%);
+  font-size: clamp(2.5rem, 10vw + 0.5rem, 6rem);
+  line-height: 1;
+  font-weight: 900;
   text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+.about-img {
+  border-radius: 15px;
+  outline: none;
+}
+.about-img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(
+    rgb(0 0 0 / 1),
+    rgb(0 0 0 / 0.5) 80%,
+    rgb(0 0 0 / 0)
+  );
+  mask-image: linear-gradient(
+    rgb(0 0 0 / 1),
+    rgb(0 0 0 / 0.5) 30%,
+    rgb(0 0 0 / 0)
+  );
 }
 
-.about .call-us h4 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-family: var(--font-default);
-}
-
-.about .call-us p {
-  font-size: 1em;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.about .content ul {
-  list-style: none;
+.about-content {
+  width: 80%;
+  margin: 0 auto;
   padding: 0;
 }
+.about-content p {
+  line-height: 2;
+  font-weight: 500;
+  padding: 1.5rem 0;
+}
 
-.about .content ul li {
-  padding: 0 0 8px 26px;
+.about-content h2 {
+  color: hsl(0, 0%, 87%);
+  font-size: clamp(2rem, 10vw + 0.5rem, 6rem);
+  line-height: 1;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
   position: relative;
-}
-
-.about .content ul i {
-  position: absolute;
-  font-size: 20px;
-  left: 0;
-  top: -3px;
-  color: var(--color-primary);
-}
-#call-to-order {
-  color: #ce1212;
-  padding: 5px;
-  border: 1px solid #ce1212;
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
+  z-index: 2;
 }
 
 @-webkit-keyframes pulsate-btn {
@@ -758,7 +762,7 @@ span {
 
 .champion-menu {
   position: relative;
-  background-image: url("https://images.unsplash.com/photo-1518112166137-85f9979a43aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+  background-image: url("https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80");
   background-position: center;
   background-size: contain;
   display: flex;
@@ -816,28 +820,11 @@ span {
   font-size: 1.1rem;
 }
 
-.card-menu {
-  padding: 0;
-  margin: 0 4rem;
-}
-
-.card-menu h4 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.card-menu h1 {
-  color: #ecd540;
-  width: 100%;
-  font-size: 3.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+.pizza-link a {
+  color: #333;
 }
 .pizza-link {
   background-color: #fff;
-}
-.pizza-link a {
-  color: #333;
 }
 .pasta-link {
   background-color: #fcbf49;
@@ -861,24 +848,68 @@ span {
   background-color: #fcbf49;
 }
 
-#pizza1,
-.salads,
-.food,
-.burger,
-.pasta1,
-.club-sandwich,
-.soft-drink {
-  position: relative;
-  width: 85%;
-  margin: 4rem auto;
+/* ------------------------------------------------------- pizza menu */
+
+.card-menu {
   padding: 0;
+  margin: 0 4rem;
+}
+
+/* .card-menu h4 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+.food-menu-items h1 {
+  color: #b91616;
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.food-menu-items {
+  position: relative;
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: scroll;
+  backdrop-filter: blur(9px);
+}
+
+.drink-menu-items {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  padding: 2rem;
+  margin: 0 auto;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  overflow: hidden;
   backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .menu-price,
@@ -890,80 +921,67 @@ span {
 }
 
 .pizza-sizes select {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 10px;
-  appearance: none;
-  border: none;
-}
-.pizza-sizes select {
   outline: none;
-  border: 2px solid #202020;
   font-weight: 500;
   text-align: center;
   color: #2e2f2e;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  width: 80%;
+  appearance: none;
+  border: none;
 }
 .pizza-details {
   padding: 1rem;
 }
 
 .pizza-details h4 {
-  color: #ffffff;
-  font-size: 2rem;
+  color: #3c3a3a;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
 .pizza-details p {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #c5baba;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #383636;
+  padding: 0 1rem;
+}
+.menu-price p {
+  color: #fa251a;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .extra-items {
-  width: 50%;
-  color: #ccc282;
+  width: 75%;
+  color: #171401;
   border-left: 1px solid #d4d4e0;
   border-right: 1px solid #d4d4e0;
   padding: 1rem;
   margin: 0 auto;
 }
-.drink-items {
-  width: 85%;
-  margin: 5rem auto;
-  color: #fff;
-  outline: none;
-}
-
-.pizza-card,
-.pasta-card,
-.burger-card,
-.food-card,
-.salad-card {
-  color: #000;
-  text-align: center;
-  padding: 1rem;
-  margin: 3rem 0;
-  outline: none;
-}
 
 .drinks-details {
   text-align: center;
   width: 100%;
-  padding: 2rem;
+  color: #333;
+}
+#alcohol {
+  color: #303639;
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 .drinks-details p,
 .drinks-card p {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #73e41c;
+  color: #f9f9f9;
 }
 
-.drinks-details:not(:last-child) {
-  border-bottom: 1px solid #777;
-}
-
-@media (max-width: 628px) {
+@media (max-width: 608px) {
   .menu-cards {
     padding: 0;
     margin: 0;
@@ -992,15 +1010,42 @@ span {
 
   .pizza-details {
     padding: 0;
-    margin: 4rem 0;
+    margin: 3rem 0;
+  }
+  .pizza-details p {
+    font-size: 1.2rem;
+  }
+  .pizza-details h4 {
+    font-size: 1.5rem;
   }
   .menu-price p {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    color: #f7f7f7;
+    color: #ffffff;
+  }
+  .pizza-details select {
+    width: fit-content;
   }
   .extra-items {
     width: 100%;
+  }
+
+  /*-------------------------------------- ABOUT -------------------------- */
+
+  .about-img img {
+    object-fit: contain;
+    height: fit-content;
+  }
+  .about-content p {
+    font-size: 1rem;
+  }
+  .about-content h2 {
+    margin: -2rem 0 1rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .about-content h2 {
+    margin: -10rem 0 2rem 0;
   }
 }
 
