@@ -657,6 +657,10 @@ span {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
 .about-container {
   display: flex;
   flex-direction: column;
@@ -664,7 +668,6 @@ span {
   height: 75vh;
   margin: 8rem auto 0 auto;
   position: relative;
-  background-color: #ffffff;
 }
 
 .hero-title {
@@ -677,11 +680,10 @@ span {
   position: relative;
   z-index: 2;
 }
-.about-img {
-  border-radius: 15px;
-  outline: none;
+.about-picture {
+  overflow: hidden;
 }
-.about-img img {
+.about-picture img {
   position: absolute;
   top: 0;
   right: 0;
@@ -691,7 +693,7 @@ span {
   object-fit: cover;
   -webkit-mask-image: linear-gradient(
     rgb(0 0 0 / 1),
-    rgb(0 0 0 / 0.5) 80%,
+    rgb(0 0 0 / 0.8) 80%,
     rgb(0 0 0 / 0)
   );
   mask-image: linear-gradient(
@@ -710,6 +712,7 @@ span {
   line-height: 2;
   font-weight: 500;
   padding: 1.5rem 0;
+  font-size: 1.3rem;
 }
 
 .about-content h2 {
@@ -721,6 +724,69 @@ span {
   text-transform: uppercase;
   position: relative;
   z-index: 2;
+}
+
+/*  ABOUT NEW PAGE */
+.about .about-img {
+  background-position: center;
+  background-size: cover;
+}
+
+.about h3 {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: var(--font-secondary);
+}
+
+.about .call-us {
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background-color: #fff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+}
+
+.about .call-us h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-family: var(--font-default);
+}
+
+.about .call-us p {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding: 0 0 8px 26px;
+  position: relative;
+}
+
+.about .content ul i {
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  top: -3px;
+  color: var(--color-primary);
+}
+#call-to-order {
+  color: #ce1212;
+  padding: 5px;
+  border: 1px solid #ce1212;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
 }
 
 @-webkit-keyframes pulsate-btn {
@@ -890,7 +956,7 @@ span {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   overflow: scroll;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(15px);
 }
 
 .drink-menu-items {
@@ -928,7 +994,7 @@ span {
   padding: 10px;
   font-size: 1.1rem;
   border-radius: 10px;
-  width: fit-content;
+  width: 80%;
   appearance: none;
   border: none;
 }
@@ -945,7 +1011,7 @@ span {
 
 .pizza-details p {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #383636;
   padding: 0 1rem;
 }
@@ -981,7 +1047,7 @@ span {
   color: #f9f9f9;
 }
 
-@media (max-width: 608px) {
+@media (max-width: 628px) {
   .menu-cards {
     padding: 0;
     margin: 0;
@@ -1013,7 +1079,7 @@ span {
     margin: 3rem 0;
   }
   .pizza-details p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .pizza-details h4 {
     font-size: 1.5rem;
@@ -1028,24 +1094,6 @@ span {
   }
   .extra-items {
     width: 100%;
-  }
-
-  /*-------------------------------------- ABOUT -------------------------- */
-
-  .about-img img {
-    object-fit: contain;
-    height: fit-content;
-  }
-  .about-content p {
-    font-size: 1rem;
-  }
-  .about-content h2 {
-    margin: -2rem 0 1rem 0;
-  }
-}
-@media (max-width: 480px) {
-  .about-content h2 {
-    margin: -10rem 0 2rem 0;
   }
 }
 
