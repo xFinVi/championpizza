@@ -696,11 +696,7 @@ span {
     rgb(0 0 0 / 0.8) 80%,
     rgb(0 0 0 / 0)
   );
-  mask-image: linear-gradient(
-    rgb(0 0 0 / 1),
-    rgb(0 0 0 / 0.5) 30%,
-    rgb(0 0 0 / 0)
-  );
+  mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.8) 30%);
 }
 
 .about-content {
