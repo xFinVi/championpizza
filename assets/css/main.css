@@ -693,7 +693,7 @@ span {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  object-fit: cover;
+  object-fit: contain;
   -webkit-mask-image: linear-gradient(
     rgb(0 0 0 / 1),
     rgb(0 0 0 / 0.8) 90%,
@@ -710,7 +710,7 @@ span {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: -15px auto 0 auto;
+  margin: -100px auto 0 auto;
 }
 
 .about-logo img {
@@ -726,7 +726,7 @@ span {
   line-height: 2;
   font-weight: 500;
   padding: 1.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .about-content h2 {
@@ -738,6 +738,35 @@ span {
   text-transform: uppercase;
   position: relative;
   z-index: 2;
+}
+
+@media (min-width: 1108px) {
+  .about-page-container {
+    display: flex;
+    width: 100%;
+    margin: 6rem 0;
+  }
+  .about-logo {
+    display: none;
+  }
+
+  .about-container {
+    width: 45%;
+    justify-content: flex-start;
+  }
+  .about-picture {
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .about-content {
+    padding: 2rem 0;
+    width: 45%;
+  }
+  .about-content p {
+    margin: 2rem 0;
+    font-size: 1rem;
+  }
 }
 
 /*  ABOUT NEW PAGE */
