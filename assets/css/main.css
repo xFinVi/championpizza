@@ -696,16 +696,27 @@ span {
   object-fit: cover;
   -webkit-mask-image: linear-gradient(
     rgb(0 0 0 / 1),
-    rgb(0 0 0 / 0.8) 70%,
+    rgb(0 0 0 / 0.8) 90%,
     rgb(0 0 0 / 0)
   );
   mask-image: linear-gradient(
     rgb(0 0 0 / 1),
-    rgb(0 0 0 / 0.7) 70%,
+    rgb(0 0 0 / 0.9) 70%,
     rgb(0 0 0 / 0)
   );
 }
 
+.about-logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: -15px auto 0 auto;
+}
+
+.about-logo img {
+  width: 235px;
+  max-width: 255px;
+}
 .about-content {
   width: 80%;
   margin: 0 auto;
@@ -1186,6 +1197,9 @@ span {
   .offers-heading {
     font-size: 1rem;
     border: 2px solid #df9516;
+  }
+  .offer-content p {
+    font-size: 1rem;
   }
 }
 .offers {
